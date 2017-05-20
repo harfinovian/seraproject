@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "559788612655",
+    "firebase_url": "https://seraproject-1df3a.firebaseio.com",
+    "project_id": "seraproject-1df3a",
+    "storage_bucket": "seraproject-1df3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559788612655:android:2e298992abc4be69",
+        "android_client_info": {
+          "package_name": "com.example.harfi.seraproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559788612655-mjv7khffsn8lbcgnkmbqa22cs8hprsbn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harfi.seraproject",
+            "certificate_hash": "775fb9dc568d22ac8b434ff22db3f701f6aa1e76"
+          }
+        },
+        {
+          "client_id": "559788612655-0jos11g7ucj688eomrsp64mqst52ldtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGQCFG6A1ptkrvtPIvFhWRAIHi7Kbv-Rg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559788612655-0jos11g7ucj688eomrsp64mqst52ldtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
