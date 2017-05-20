@@ -23,7 +23,16 @@
         <activity
             android:name=".view.main.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.profile.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".view.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harfi.seraproject.view.main.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

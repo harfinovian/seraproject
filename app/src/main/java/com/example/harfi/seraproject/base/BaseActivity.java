@@ -49,12 +49,9 @@ public class BaseActivity extends AppCompatActivity {
         //==========================================================================================
         View headerview = nv.getHeaderView(0);
         LinearLayout header = (LinearLayout) headerview.findViewById(R.id.navigation_header_container);
-        header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(activity, "clicked", Toast.LENGTH_SHORT).show();
-                dl.closeDrawer(GravityCompat.START);
-            }
+        header.setOnClickListener(v -> {
+            Toast.makeText(activity, "clicked", Toast.LENGTH_SHORT).show();
+            dl.closeDrawer(GravityCompat.START);
         });
         //==========================================================================================
 
@@ -98,6 +95,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void openNewActivity(Class activity) {
         startActivity(new Intent(this, activity));
         finish();
+    }
+
+    protected void showToast(String message){
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.example.harfi.seraproject.presenter.main;
 
+import com.example.harfi.seraproject.model.MainModel;
+import com.example.harfi.seraproject.model.MainModelImp;
 import com.example.harfi.seraproject.view.main.MainView;
 
 /**
@@ -8,9 +10,11 @@ import com.example.harfi.seraproject.view.main.MainView;
 
 public class MainPresenterImp implements MainPresenter{
 
+    MainModel model;
     MainView view;
 
     public MainPresenterImp(MainView view) {
+        model = new MainModelImp();
         this.view = view;
     }
 }
