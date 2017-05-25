@@ -136,7 +136,7 @@ import rx.schedulers.Schedulers;
                          , MainActivity.this);
                  Log.d("image", model.getCarImage());
                  holder.getCarItem().setOnClickListener(v ->{
-                     showToast(model.getDescription());
+                     showToast(model.getCarName());
                      startActivity(new Intent(MainActivity.this, DetailActivity.class)
                             .putExtra("carName", model.getCarName())
                              .putExtra("carImage", model.getCarImage())
