@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "559788612655-kk4enhnhc9cb5i0bufhmtgevppba2p41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harfi.seraproject",
+            "certificate_hash": "f9dcce15017288654948c6b8ad026eaf057608da"
+          }
+        },
+        {
           "client_id": "559788612655-mjv7khffsn8lbcgnkmbqa22cs8hprsbn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -30,6 +38,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyBGQCFG6A1ptkrvtPIvFhWRAIHi7Kbv-Rg"
+        },
+        {
+          "current_key": "AIzaSyB91gt2wDvqWKdAXm_pHTllpCQFzE53LPY"
         }
       ],
       "services": {
