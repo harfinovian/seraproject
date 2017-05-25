@@ -47,7 +47,7 @@ public class SplashActivity extends BaseActivity implements SplashView{
         subscriber = RxFirebaseAuth.observeAuthState(mAuth)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this::onAuthSuccess, this::onError);
+                .subscribe(this::onSuccess, this::onError);
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(!prefs.getBoolean("login", false))
@@ -88,7 +88,7 @@ public class SplashActivity extends BaseActivity implements SplashView{
     }
 
     @Override
-    public void onAuthSuccess(FirebaseUser user) {
+    public void onSuccess(FirebaseUser user) {
         if (user != null) {
             // User is signed in
             Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());

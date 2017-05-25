@@ -16,7 +16,6 @@ public class SplashPresenterImp implements SplashPresenter {
         this.view = view;
     }
 
-
     @Override
     public void waitSplash(Class activity) {
         new Handler().postDelayed(() -> {

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.harfi.seraproject.view.detail.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/img_car"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimage"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:id="@+id/car_name"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:text="BMW"
+        android:textColor="@android:color/black"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_brand"
+        android:text="Brand : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_color"
+        android:text="Color : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/car_cc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car CC : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:text="ini adalah mobil"
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+</LinearLayout>

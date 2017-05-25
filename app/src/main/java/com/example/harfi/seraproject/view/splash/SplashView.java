@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public interface SplashView {
     void onSuccess(AuthResult result);
-    void onAuthSuccess(FirebaseUser result);
+    void onSuccess(FirebaseUser result);
     void onError(Throwable err);
     void showAlert();
     void openMain(Class activity);
