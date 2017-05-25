@@ -1,12 +1,10 @@
  package com.example.harfi.seraproject.view.main;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -17,7 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.harfi.seraproject.DetailActivity;
+import com.example.harfi.seraproject.view.detail.DetailActivity;
 import com.example.harfi.seraproject.R;
 import com.example.harfi.seraproject.adapter.CarListAdapter;
 import com.example.harfi.seraproject.base.BaseActivity;
@@ -29,13 +27,10 @@ import com.example.harfi.seraproject.utils.DataSnapshotMapper;
 import com.example.harfi.seraproject.utils.RxFirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
 
 import butterknife.BindView;
-import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -101,7 +96,6 @@ import rx.schedulers.Schedulers;
                          .setTitle("Quit")
                          .setMessage("Are you sure exit this application?")
                          .setPositiveButton("Yes", (dialog, which) -> {
-
                              //Stop the activity
                              MainActivity.this.finish();
                          })
@@ -117,11 +111,18 @@ import rx.schedulers.Schedulers;
      }
 
      @Override
+     public void onResume()
+     {  // After a pause OR at startup
+         super.onResume();
+         //Refresh your stuff here
+     }
+
+     @Override
      public void onSuccess(List<MainModelImp.Car> cars) {
 
-         Log.d(TAG, cars.get(0).getCarBrand());
+         GridLayoutManager LayoutManager = new GridLayoutManager(this, 2);
+         lstCar.setLayoutManager(LayoutManager);
 
-         lstCar.setLayoutManager(new GridLayoutManager(this, 2));
 
          adapter = new CarListAdapter<MainModelImp.Car, CarListHolder>(R.layout.car_item_list,
                  CarListHolder.class,
@@ -135,10 +136,13 @@ import rx.schedulers.Schedulers;
                          , MainActivity.this);
                  Log.d("image", model.getCarImage());
                  holder.getCarItem().setOnClickListener(v ->{
-                     showToast(cars.get(position).getCarBrand());
+                     showToast(model.getDescription());
                      startActivity(new Intent(MainActivity.this, DetailActivity.class)
                             .putExtra("carName", model.getCarName())
-                            .putExtra("carImage", model.getCarImage())
+                             .putExtra("carImage", model.getCarImage())
+                             .putExtra("carBrand", model.getCarBrand())
+                             .putExtra("carColor", model.getCarColor())
+                             .putExtra("carCC", model.getCarCc())
                             .putExtra("description", model.getDescription()));
                  });
              }

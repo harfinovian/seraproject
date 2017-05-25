@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.harfi.seraproject.R;
+import com.example.harfi.seraproject.view.fragment.DialogAbout;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -60,18 +61,10 @@ public class BaseActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
-                if (id == R.id.nav_camera) {
-
-                } else if (id == R.id.nav_gallery) {
-
-                } else if (id == R.id.nav_slideshow) {
-
-                } else if (id == R.id.nav_manage) {
-
-                } else if (id == R.id.nav_share) {
-
-                } else if (id == R.id.nav_send) {
-
+                if (id == R.id.nav_about) {
+                    DialogAbout detail = new DialogAbout();
+                    // Show DialogFragment
+                    detail.show(getFragmentManager(), "Dialog Fragment");
                 }
 
                 dl.closeDrawer(GravityCompat.START);
@@ -82,13 +75,8 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void setFloatingButton( FloatingActionButton fab){
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        fab.setOnClickListener(v -> Snackbar.make(v, "The Feature will comming soon can be upload item car", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show());
 
     }
 
