@@ -56,20 +56,17 @@ public class BaseActivity extends AppCompatActivity {
         });
         //==========================================================================================
 
-        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
+        nv.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
 
-                if (id == R.id.nav_about) {
-                    DialogAbout detail = new DialogAbout();
-                    // Show DialogFragment
-                    detail.show(getFragmentManager(), "Dialog Fragment");
-                }
-
-                dl.closeDrawer(GravityCompat.START);
-                return true;
+            if (id == R.id.nav_about) {
+                DialogAbout detail = new DialogAbout();
+                // Show DialogFragment
+                detail.show(getFragmentManager(), "Dialog Fragment");
             }
+            item.setChecked(false);
+            dl.closeDrawer(GravityCompat.START);
+            return false;
         });
     }
 

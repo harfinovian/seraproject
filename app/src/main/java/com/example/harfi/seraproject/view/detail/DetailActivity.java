@@ -58,6 +58,7 @@ public class DetailActivity extends BaseActivity implements DetailView {
         carBrand.append(data.getString("carBrand"));
         carColor.append(data.getString("carColor"));
         carCC.append(data.getString("carCC"));
+        desc.setText(data.getString("description"));
         Log.d("Data", data.getString("carName"));
 
     }
