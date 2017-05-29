@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.harfi.seraproject.R;
 import com.example.harfi.seraproject.view.fragment.DialogAbout;
+import com.example.harfi.seraproject.view.profile.ProfileActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -52,6 +53,7 @@ public class BaseActivity extends AppCompatActivity {
         LinearLayout header = (LinearLayout) headerview.findViewById(R.id.navigation_header_container);
         header.setOnClickListener(v -> {
             Toast.makeText(activity, "clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(activity, ProfileActivity.class));
             dl.closeDrawer(GravityCompat.START);
         });
         //==========================================================================================

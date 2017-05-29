@@ -20,6 +20,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_profile" />
+    <include layout="@layout/profile_detail" />
 
 </android.support.design.widget.CoordinatorLayout>
