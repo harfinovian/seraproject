@@ -69,6 +69,7 @@ public class SplashActivity extends BaseActivity implements SplashView{
                 Toast.makeText(SplashActivity.this, "Username or password must insert",
                         Toast.LENGTH_SHORT).show();
                 Log.d("Login","Failed");
+                splashPresenter.waitSplash(LoginActivity.class);
             }
         }
     }
@@ -108,7 +109,7 @@ public class SplashActivity extends BaseActivity implements SplashView{
     public void onError(Throwable err) {
         Log.e(TAG, err.toString());
         showToast("User name or Email is invalid");
-        splashPresenter.waitSplash(LoginActivity.class);
+        splashPresenter.waitSplash(MainActivity.class);
     }
 
     @Override

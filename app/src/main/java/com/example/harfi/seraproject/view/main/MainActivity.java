@@ -55,6 +55,7 @@ import rx.schedulers.Schedulers;
         mainPresenter = new MainPresenterImp(this);
 
         setToolbar(toolbar, drawer, navigationView, MainActivity.this);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         setFloatingButton(fab);
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
@@ -138,12 +139,16 @@ import rx.schedulers.Schedulers;
                  holder.getCarItem().setOnClickListener(v ->{
                      showToast(model.getCarName());
                      startActivity(new Intent(MainActivity.this, DetailActivity.class)
-                            .putExtra("carName", model.getCarName())
+                             .putExtra("carName", model.getCarName())
                              .putExtra("carImage", model.getCarImage())
                              .putExtra("carBrand", model.getCarBrand())
                              .putExtra("carColor", model.getCarColor())
                              .putExtra("carCC", model.getCarCc())
-                            .putExtra("description", model.getDescription()));
+                             .putExtra("carTransmission", model.getCarTransmission())
+                             .putExtra("carTdp", model.getTdp())
+                             .putExtra("carPrice", model.getCarPrice())
+                             .putExtra("carYear", model.getCarYear())
+                             .putExtra("description", model.getDescription()));
                  });
              }
          };

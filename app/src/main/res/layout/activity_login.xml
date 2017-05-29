@@ -18,20 +18,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp">
 
-        <TextView
-            android:id="@+id/textLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="SERA APPS"
-            android:textAlignment="center"
-            android:textSize="30dp" />
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:src="@mipmap/ic_launcher"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/mitra88"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/textLogo"
             android:layout_marginTop="10dp"/>
     </RelativeLayout>
 
@@ -41,7 +32,6 @@
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/layoutTitleLogo"
-        android:layout_marginTop="50dp"
         android:id="@+id/layoutButtonSignIn">
 
     </LinearLayout>

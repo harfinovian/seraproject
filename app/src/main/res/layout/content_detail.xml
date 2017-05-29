@@ -48,6 +48,34 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"/>
 
     <TextView
+        android:id="@+id/car_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car Price : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/car_tdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car TDP : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/car_transmission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car Transmission : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/car_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car Year : "
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Description"

@@ -23,6 +23,10 @@ public class DetailActivity extends BaseActivity implements DetailView {
     @BindView(R.id.car_brand)TextView carBrand;
     @BindView(R.id.car_color)TextView carColor;
     @BindView(R.id.car_cc)TextView carCC;
+    @BindView(R.id.car_transmission)TextView carTransmission;
+    @BindView(R.id.car_price)TextView carPrice;
+    @BindView(R.id.car_tdp)TextView carTdp;
+    @BindView(R.id.car_year)TextView carYear;
     @BindView(R.id.desc)TextView desc;
 
     @Override
@@ -31,6 +35,7 @@ public class DetailActivity extends BaseActivity implements DetailView {
         bind(R.layout.activity_detail);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
@@ -48,16 +53,20 @@ public class DetailActivity extends BaseActivity implements DetailView {
     @Override
     public void fetchData(Bundle data) {
 
+        toolbar.setTitle(data.getString("carName"));
         Glide.with(DetailActivity.this)
                 .load(data.get("carImage"))
                 .fitCenter()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgCar);
-
         carName.setText(data.getString("carName"));
         carBrand.append(data.getString("carBrand"));
         carColor.append(data.getString("carColor"));
         carCC.append(data.getString("carCC"));
+        carTransmission.append(data.getString("carTransmission"));
+        carTdp.append(String.valueOf(data.getLong("carTdp")));
+        carPrice.append(String.valueOf(data.getLong("carPrice")));
+        carYear.append(data.getString("carYear"));
         desc.setText(data.getString("description"));
         Log.d("Data", data.getString("carName"));
 

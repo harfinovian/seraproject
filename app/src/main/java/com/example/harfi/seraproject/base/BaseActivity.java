@@ -59,7 +59,10 @@ public class BaseActivity extends AppCompatActivity {
         nv.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
 
-            if (id == R.id.nav_about) {
+            if (id == R.id.nav_transaction){
+
+            }
+            else if (id == R.id.nav_about) {
                 DialogAbout detail = new DialogAbout();
                 // Show DialogFragment
                 detail.show(getFragmentManager(), "Dialog Fragment");

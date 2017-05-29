@@ -19,7 +19,7 @@ public class MainModelImp implements MainModel {
 
         public Car() {}
 
-        private int carID;
+        private Long carID;
         private String carName;
         private String carBrand;
         private String carImage;
@@ -29,12 +29,12 @@ public class MainModelImp implements MainModel {
         private String carFuel;
         private String carTransmission;
         private String carLocation;
-        private Double carPrice;
-        private Double tdp;
+        private Long carPrice;
+        private Long tdp;
         private String description;
 
-        public int getcarID() {return carID;}
-        public void setcarID(int carID) {this.carID = carID;}
+        public Long getcarID() {return carID;}
+        public void setcarID(Long carID) {this.carID = carID;}
         public String getCarName() {return carName;}
         public void setCarName(String carName) {this.carName = carName;}
         public String getCarBrand() {return carBrand;}
@@ -53,10 +53,10 @@ public class MainModelImp implements MainModel {
         public void setCarTransmission(String carTransmission) {this.carTransmission = carTransmission;}
         public String getCarLocation() {return carLocation;}
         public void setCarLocation(String carLocation) {this.carLocation = carLocation;}
-        public Double getCarPrice() {return carPrice;}
-        public void setCarPrice(Double carPrice) {this.carPrice = carPrice;}
-        public Double getTdp() {return tdp;}
-        public void setTdp(Double tdp) {this.tdp = tdp;}
+        public Long getCarPrice() {return carPrice;}
+        public void setCarPrice(Long carPrice) {this.carPrice = carPrice;}
+        public Long getTdp() {return tdp;}
+        public void setTdp(Long tdp) {this.tdp = tdp;}
         public String getDescription() {return description;}
         public void setDescription(String description) {this.description = description;}
 
